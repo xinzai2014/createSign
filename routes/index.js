@@ -26,7 +26,7 @@ router.post('/getSign',async(ctx,next)=>{
     var cmd ;
     // java -jar creat_sign.jar 121212 2020/09/09 --xjar.password=YulumhCF
   
-    cmd = `java -jar ${signJar} ${reqData.dogId} ${reqData.valid} --xjar.password=YulumhCF`;
+    cmd = `java -jar ${signJar} ${reqData.dogId?reqData.dogId:reqData.deviceId} ${reqData.valid} --xjar.password=YulumhCF`;
     console.log(cmd);
     await new Promise((resolve,reject)=>{
       exec(cmd,{windowsHide:true}, (error, stdout, stderr) => {
