@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生成激活码</title>
+    <script type="text/javascript" src="/javascripts/jquery-1.8.3.min.js"></script>
+    <script src="/javascripts/jsencrypt.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>人物画像激活码生成</h1>
+    <div class="controller">
+        <p>
+           <input type="number" placeholder="需要生成激活码的数量" id="insert-num" />  
+           <input type="button" value="生成单机版" id = "confirm" />
+           <input type="button" value="生成服务器版" id = "confirmSys" />
+        </p>
+        <div class="dog-list">
+            <ol>
+
+            </ol>
+        </div>
+        <p>
+             <input type="button" value="自动生成" id="auto-recognize" style="display: none"/>
+            <input type="button" value="重置" id="reset" class="reset" style="display: none;">
+        </p>
+    </div>
+    <script src="/javascripts/index.min.js"></script>
+</body>
+</html>
